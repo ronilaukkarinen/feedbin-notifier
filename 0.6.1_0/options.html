@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Feedbin Notifier Options</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<link href="css/options.css" rel="stylesheet" media="screen" />
+		<link rel="icon" type="image/png" href="images/feedbin-logo-16.png" />
+	</head>
+	<body>
+		<div class="navbar navbar-static-top">
+			<div class="container">
+				<a class="navbar-brand" href="http://thunraz.com/feedbin-notifier">
+					<img src="images/feedbin-logo-19.png" alt="" style="vertical-align: text-top" />
+					Feedbin Notifier
+				</a>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="jumbotron">
+				<h1>Feedbin notifier</h1>
+				<p class="lead">This extension notifies you of unread feeds in your Feedbin account.</p>
+				<p>You might not need to enter your login credentials when you're already logged in. But this doesn't work reliably. If you're not logged in, please enter your username and password.</p>
+				<p>Also you probably want to change the checking timespan.</p>
+			</div>
+
+			<h3>Settings</h3>
+			<form class="form-horizontal" id="settings">
+					<div class="form-group">
+						<label for="email" class="col-lg-2 control-label">Email address</label>
+						<div class="col-lg-10">
+							<input type="email" class="form-control" id="email" placeholder="Enter email" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="col-lg-2 control-label">Password</label>
+						<div class="col-lg-10">
+							<input type="password" class="form-control" id="password" placeholder="Password" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="interval" class="col-lg-2 control-label">Check interval</label>
+						<div class="col-lg-10">
+							<select id="interval" class="form-control">
+								<option value="5">5 minutes</option>
+								<option value="10">10 minutes</option>
+								<option value="15" selected="selected">15 minutes</option>
+								<option value="30">30 minutes</option>
+								<option value="60">60 minutes</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-lg-offset-2 col-lg-10">
+							<button id="save" class="btn btn-primary">Save &amp; refresh</button>
+						</div>
+					</div>
+			</form>
+
+			<h3>Contact</h3>
+
+			<ul class="list-unstyled">
+				<li>Throw some kind words at me on <a href="https://twitter.com/Thunraz/">Twitter</a> or <a href="https://app.net/thunraz">App.net</a>.</li>
+				<li>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						And if you like this extension consider donating me a beer. :)
+						&nbsp;
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input type="hidden" name="hosted_button_id" value="X84S2WJUW424G" />
+						<input
+							type="image"
+							src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+							name="submit"
+							alt="PayPal - The safer, easier way to pay online!"
+							style="vertical-align: bottom;">
+					</form>
+				</li>
+			</ul>
+
+		</div>
+
+		<div id="status" class="alert alert-success hide-alert">
+			<button type="button" class="close" id="close-button">&times;</button>
+			<p>Options saved.</p>
+		</div>
+
+		<script type="text/javascript" src="js/options.js"></script>
+	</body>
+</html>

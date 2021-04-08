@@ -1,0 +1,31 @@
+{
+   "author": "Thunraz",
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/feedbin-logo-19.png",
+         "38": "images/feedbin-logo-38.png"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "js/feedbin.js" ],
+      "matches": [ "https://feedbin.com/*" ]
+   } ],
+   "description": "Provides a basic notification service for the RSS aggregator Feedbin.",
+   "icons": {
+      "128": "images/feedbin-logo-128.png",
+      "16": "images/feedbin-logo-16.png",
+      "48": "images/feedbin-logo-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFPhItGP75O4wtQ4FyCDzE0YrUqk26yj9x8CzXI/PKZHDVjFM1CsdThoP72sZoP3pcOekaQXtOlGSygAjV1C1cUZwB3uZNoWmiSxXHLN+ennO7rhUvh++iuDW+jcZCme2LowiWl6X3ZPuXQJenFpp2bb/tKdDvfrZ2uR0Rz0uSCQIDAQAB",
+   "manifest_version": 2,
+   "name": "Feedbin Notifier",
+   "options_page": "options.html",
+   "permissions": [ "alarms", "https://*.feedbin.com/*" ],
+   "short_name": "Feedbin",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.6.1",
+   "web_accessible_resources": [ "js/feedbin.js" ]
+}

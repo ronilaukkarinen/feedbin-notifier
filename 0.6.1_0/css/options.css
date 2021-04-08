@@ -1,0 +1,19 @@
+#status
+{
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 50%;
+}
+
+.show-alert
+{
+    transition: opacity 400ms;
+    opacity: 1;
+}
+
+.hide-alert
+{
+    transition: opacity 400ms;
+    opacity: 0;
+}
